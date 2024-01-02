@@ -97,3 +97,16 @@ http://localhost:3000/api/v2/seed
 ## Stack usado
 * MongoDB
 * Nest
+
+## Ejecución en Docker
+1. crear los ficheros __.env.prod__, __docker-compose.prod.yaml__ y __Dockerfile__
+
+2. Ejecutamos la primera vez
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+3. Ejecutamos la segunda vez
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
